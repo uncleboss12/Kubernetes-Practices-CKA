@@ -38,11 +38,11 @@ ENTRYPOINT ["sleep"]
 
 CMD ["5"]
 ```
-
+```bash
 docker run ubuntu-sleeper 
 
 docker run --entrypoint sleep2.0 ubuntu-sleeper 10
-
+```
 
 #### Commands and Arguments
 ```yaml
@@ -109,7 +109,7 @@ spec:
 ```
 
 #### Environment variables
-
+```bash
 kubectl create configmap \
    app-config --from-literal=APP_COLOR=blue
 
@@ -117,7 +117,7 @@ kubectl create configmap \
 kubectl get configmaps
 
 kubectl describe configmaps
-
+```
 
 #### Secrets creation
 ##### Imperative Approach
