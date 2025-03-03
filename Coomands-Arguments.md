@@ -144,7 +144,7 @@ kubectl create secret generic \
 
 ```                
 ##### Declarative Approach
-
+```bash
 echo -n 'mysql' | base64  ### to encode the password
 
 kubectl create -f secrets.yml
@@ -158,7 +158,8 @@ kubectl describe secret app-secret -o yaml
 
 
 echo "cmds45t=' | base64 --decode # to  decode secrets
-
+```
 ### secrets like environment variables can be use an ENV, Single ENV and as a Volume
-
+```bash
 ls /opt/app-secret-volumes # to see the secrets files
+```
