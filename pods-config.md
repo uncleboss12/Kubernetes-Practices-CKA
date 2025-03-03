@@ -13,9 +13,9 @@ kubectl get pods -l app=nginx
 ```bash
 kubectl describe pods nginx-prod-7b4c8b5c6f-7z5zr
 ```
-****
+```bash
 kubectl apply -f pods-config.yml
-****
+```
 ```bash
 kubectl delete pods nginx-prod-7b4c8b5c6f-7z5zr
 ```
