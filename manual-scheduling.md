@@ -40,13 +40,13 @@ kubectl label nodes node1 size=Large
 ```
 
 #### Daemon set 
-
+```bash
 kubectl get daemonsets
 
 kubectl describe daemonsets monitoring-daemon
-
+```
 #### Static Pods
-
+```bash
 ls /etc/kubernetes/manifests
 
 kubeconfig.yaml
@@ -54,7 +54,7 @@ kubeconfig.yaml
 kubelet.service
 
 docker ps
-
+```
 
 #### Multiple Schedulers
 ```bash
@@ -80,7 +80,7 @@ kubectl describe configmap my-scheduler-config
 
 
 #### Admission Controllers
-
+```bash
 kube-apiserver -h | grep enable-admission-plugins
 
 kubectl exec kube-apiserver-controlplane -n kube-system -- kube-apiserver -h | grep enable-admission-plugins  ## in kubeadm 
@@ -97,9 +97,9 @@ kubectl create secret tls webhook-secret-tls \
   --namespace=webhook-demo
 
 
-
+```
 #### Monitoring -- metric Server
-
+```bash
 minikube addons enable metric-server
 
 git clone https://github.com/kubernetes-incubator/metrics-server.git
@@ -112,9 +112,9 @@ kubectl top pod
 
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
-
+```
  #### Managing application logs
-
+```bash
 docker run kodekloud/event-simulator
 
 kubectl create -f event-simulator.yaml
@@ -124,10 +124,10 @@ kubectl logs -f event-simulator-pod
 kubectl logs -f event-simulator-pod event-simulator  ## Multiple images in a pods
 
 kubectl logs <pod-name>
-
+```
 
 #### Rolling Updates and Rollbacks
-
+```bash
 kubectl rollout status deployment/myapp-deployment
 
 kubectl rollout history deployment/myapp-deployment
@@ -149,3 +149,4 @@ kubectl get deployment frontend -o yaml > deployment-frontend.yaml
 
 kubectl set image deployment/frontend \
          simple-webapp=kodekloud/webapp-color:v3
+```
