@@ -1,11 +1,13 @@
 ### Commands
-
+```bash
 docker run ubuntu .
-
+```
+```bash
 docker ps -a 
-
+```
+```bash
 docker run ubuntu sleep 5
-
+```
 ###### inside the Ubuntu image 
 
 ### DOCKERFILE
