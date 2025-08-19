@@ -11,11 +11,11 @@ docker run ubuntu sleep 5
 ###### inside the Ubuntu image 
 
 ### DOCKERFILE
-
+```Dockerfile
 FROM ubuntu
 
 CMD sleep 5 ### or CMD ["Sleep", "5"]
-
+```
 
 docker run ubuntu-sleeper sleep 10 
 
@@ -165,3 +165,4 @@ echo "cmds45t=' | base64 --decode # to  decode secrets
 ```bash
 ls /opt/app-secret-volumes # to see the secrets files
 ```
+
