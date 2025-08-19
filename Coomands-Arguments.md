@@ -16,9 +16,9 @@ FROM ubuntu
 
 CMD sleep 5 ### or CMD ["Sleep", "5"]
 ```
-
+```bash
 docker run ubuntu-sleeper sleep 10 
-
+```
 
 #### Dockerfile
 ```Dockerfile
@@ -165,4 +165,5 @@ echo "cmds45t=' | base64 --decode # to  decode secrets
 ```bash
 ls /opt/app-secret-volumes # to see the secrets files
 ```
+
 
